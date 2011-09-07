@@ -2,6 +2,20 @@
 reCaptcha PHP library is a modification to the original PHP library provided by Google. I've modified it to use a class structure, so it can be used more fluently in modern object oriented projects.
 == How to use the lib ==
 === Installation ===
-coming...
+Installation is quite easy. Just copy the php file somewhere and then include it in your PHP code.
+{{{ include '/path/to/lib/recaptchalib.php'; }}}
 === Usage ===
-coming...
+First you'll have to make an object out of the ReCaptcha class. It takes your keys as parameters as you make the object.
+{{{ 
+$pubkey = 'your public key';
+$privkey = 'your private key';
+$captcha = new ReCaptcha($pubkey, $privkey); 
+}}}
+Then when you want to get the html part of the reCaptcha for your form:
+{{{
+$html = $captcha->get_html();
+}}}
+And when you want to check if the response was correct
+{{{
+$response = $captcha->check_answer($_SERVER['REMOTE_ADDR'], $_POST['recaptcha_challenge_field'], $_POST['recaptcha_response_field']);
+}}}
