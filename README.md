@@ -1,7 +1,0 @@
-== Readme ==
-reCaptcha PHP library is a modification to the original PHP library provided by Google. I've modified it to use a class structure, so it can be used more fluently in modern object oriented projects.
-=== How to use the lib ===
-** Installation **
-jotain...
-** Usage **
-jotain...
