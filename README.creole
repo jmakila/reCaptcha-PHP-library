@@ -1,5 +1,7 @@
 = reCaptcha PHP library =
-reCaptcha PHP library is a modification to the original PHP library provided by Google. I've modified it to use a class structure, so it can be used more fluently in modern object oriented projects.
+reCaptcha PHP library is a modification to the original PHP library provided by Google. 
+I've modified it to use a class structure, so it can be used more fluently in modern 
+object oriented projects. Requires PHP5.
 == How to use the lib ==
 === Installation ===
 Installation is quite easy. Just copy the PHP file somewhere and then include it in your PHP code.
