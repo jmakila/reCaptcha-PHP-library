@@ -3,13 +3,13 @@
  * This is a PHP library that handles calling reCAPTCHA. Modified to use a class 
  * structure.
  *    - Documentation and latest version
- *          http://recaptcha.net/plugins/php/
+ *          https://recaptcha.net/plugins/php/
  *    - Get a reCAPTCHA API Key
  *          https://www.google.com/recaptcha/admin/create
  *    - Discussion group
- *          http://groups.google.com/group/recaptcha
+ *          https://groups.google.com/group/recaptcha
  *
- * Copyright (c) 2007 reCAPTCHA -- http://recaptcha.net
+ * Copyright (c) 2007 reCAPTCHA -- https://recaptcha.net
  * AUTHORS:
  *   Mike Crawford
  *   Ben Maurer
@@ -37,7 +37,7 @@
 /**
  * The reCAPTCHA server URL's
  */
-define("RECAPTCHA_API_SERVER", "http://www.google.com/recaptcha/api");
+define("RECAPTCHA_API_SERVER", "https://www.google.com/recaptcha/api");
 define("RECAPTCHA_API_SECURE_SERVER", "https://www.google.com/recaptcha/api");
 define("RECAPTCHA_VERIFY_SERVER", "www.google.com");
 
@@ -230,13 +230,13 @@ class ReCaptcha {
 		$privkey = $this->privkey;
 		if ($pubkey == '' || $pubkey == null || $privkey == "" || $privkey == null) {
 			die ("To use reCAPTCHA Mailhide, you have to sign up for a public and private key, " .
-				 "you can do so at <a href='http://www.google.com/recaptcha/mailhide/apikey'>http://www.google.com/recaptcha/mailhide/apikey</a>");
+				 "you can do so at <a href='https://www.google.com/recaptcha/mailhide/apikey'>https://www.google.com/recaptcha/mailhide/apikey</a>");
 		}
 
 		$ky = pack('H*', $privkey);
 		$cryptmail = $this->_aes_encrypt ($email, $ky);
 
-		return "http://www.google.com/recaptcha/mailhide/d?k=" . $pubkey . "&c=" . $this->_mailhide_urlbase64 ($cryptmail);
+		return "https://www.google.com/recaptcha/mailhide/d?k=" . $pubkey . "&c=" . $this->_mailhide_urlbase64 ($cryptmail);
 	}
 
 	/**
@@ -262,7 +262,7 @@ class ReCaptcha {
 	 * Gets html to display an email address given a public an private key.
 	 * to get a key, go to:
 	 *
-	 * http://www.google.com/recaptcha/mailhide/apikey
+	 * https://www.google.com/recaptcha/mailhide/apikey
 	 */
 	function mailhide_html($email) {
 		$pubkey = $this->pubkey;
